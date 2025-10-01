@@ -1,0 +1,195 @@
+/* ======================
+   RESET BÁSICO
+   ====================== */
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* ======================
+   CORPO E GRADIENTE 
+   ====================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000; 
+    color: #fff;
+    padding-top: 60px; 
+    transition: background-color 2s ease; /* suaviza a mudança de cor */
+}
+
+/* ======================
+   CABEÇALHO FIXO
+   ====================== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* ======================
+   CONTEÚDO INICIAL
+   ====================== */
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* centraliza horizontalmente */
+    justify-content: flex-start; /* alinha no topo */
+    padding: 50px 20px;
+    gap: 20px;
+    text-align: center;
+    min-height: auto;          /* permite que o conteúdo siga o fluxo natural */
+}
+
+/* ANIMAÇÃO "OLÁ" */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* CAIXA DE TEXTO INICIAL */
+.texto1 {
+    opacity: 0;
+    border-radius: 1em;
+    padding: 20px;
+    background: rgba(0,0,0,0.3);
+    animation: showBox 1s ease forwards;
+    animation-delay: 3s;
+    max-width: 500px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+@keyframes showBox {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ======================
+   SEÇÕES PRINCIPAIS
+   ====================== */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 60px 20px;
+    margin: 40px 0;
+    background: rgba(0,0,0,0.3);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Última seção com espaçamento extra */
+main section:last-child {
+    margin-bottom: 100px;
+}
+
+/* ======================
+   CARTÕES DE PROJETO / CERTIFICADOS
+   ====================== */
+.card {
+    background: rgba(255,255,255,0.1);
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 6px;
+    max-width: 520px;
+    transition: transform 0.3s;
+    text-decoration: none;
+    outline: none;
+    font-size: larger;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3  );
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* LISTA DE CERTIFICADOS */
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.card ul li {
+    margin: 5px 0;
+}
+
+/* ======================
+   SOFT SKILLS
+   ====================== */
+.skills {
+    list-style: none;
+    padding: 0;
+}
+
+.skills ul {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+/* ======================
+   LINKS SOCIAIS
+   ====================== */
+.social-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+    padding: 0 10px;
+    position: relative;
+}
+
+/* Adiciona a barra apenas antes dos links que não são o primeiro */
+.social-link + .social-link::before {
+    content: "|";
+    position: absolute;
+    left: 0;
+    color: #fff;
+}
+
+
+.social-link:hover {
+    color: #007c0a;
+}
